@@ -4,17 +4,15 @@
 
 - Create driver factory: Create a package for driver-based management and a class for initialising the driver within your page object classes
 
-- Create a page object/component package - add classes in here that will consist of a collection of elements and interaction methods that use the driver instance inherited from your driver factory. In this suite I have used @FindBy annotations to return elements.
+- Create a page object/component package - add classes in here that will consist of a collection of elements and interaction methods that use the driver instance inherited from your driver factory. In this suite I have used @FindBy annotations to return elements. Add the page constructor to each class of this nature, to initialise elements declared in the class so they can be used in your test methods.
 
-Add the page contructure to each class of this nature, to initialise elements declared in the class so they can be used in your test methods.
+- Create tests - create a test package and start adding tests that use the test methods from your page objects. Instantiate a driver for this class (i've used web driver manager as it fetches binaries for you, without having to use local files).
 
-- Create tests - create a test package and start adding tests that use the test methods from your page objects.
+- Instantiate the page object in any test methods.
 
-Instantiate a driver for this class (i've used web driver manager as it fetches binaries for you, without having to use local files).
+- Write test methods, seperating them out using JUNIT annotations.
 
-Instantiate the page object.
-
-Write test methods, seperating them out using JUNIT annotations.  
+- Profit
 
 
 ### Factory Test ###
